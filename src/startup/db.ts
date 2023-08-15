@@ -3,8 +3,7 @@ import mongoose from "mongoose";
 
 export default function () {
     //TODO: move connection string to environment variables for security
-    const con = "mongodb+srv://farzadnadiri:xC3VFQNv5MoBehKM@cluster0.7hk9jtt.mongodb.net/?retryWrites=true&w=majority";
-
+    const con = process.env.ConnectionString;
     mongoose.connect(con as string)
         .then(
             async () => {
